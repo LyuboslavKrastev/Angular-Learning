@@ -3,7 +3,7 @@
     <div class="list-group">
       <a
         [routerLink]="['/servers', server.id]"
-        [queryParams]="{ allowEdit: '1' }"
+        [queryParams]="{ allowEdit: server.id === 2 ? '1' : '0' }"
         fragment="loading"
         href="#"
         class="list-group-item"
@@ -14,9 +14,12 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <button class="btn btn-primary" (click)="onReload()">Reload</button>
+    <!-- <button class="btn btn-primary" (click)="onReload()">Reload</button>
     <app-edit-server></app-edit-server>
-    <hr />
+    <hr /> -->
     <!-- <app-server></app-server> -->
+
+    <!-- the nested routes go here -->
+    <router-outlet></router-outlet>
   </div>
 </div>

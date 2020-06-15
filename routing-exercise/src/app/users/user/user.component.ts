@@ -17,6 +17,8 @@ export class UserComponent implements OnInit {
       name: this.route.snapshot.params['name']
     };
 
+    console.log(this.user);
+
     this.route.params
       .subscribe(
         (params: Params) => {
