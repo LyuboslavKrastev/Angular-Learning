@@ -1,3 +1,5 @@
+import { SortPipe } from './pipes/sort.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -7,7 +9,9 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReversePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
